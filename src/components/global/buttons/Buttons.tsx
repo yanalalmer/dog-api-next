@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { SunIcon, MoonIcon } from '/public/icons';
 
 // toggle theme button
 export const ThemeToggleButton: React.FC = () => {
@@ -12,10 +13,10 @@ export const ThemeToggleButton: React.FC = () => {
       onClick={toggleTheme}
     >
       <span className='w-8 h-8 block dark:hidden main-transition'>
-        sun icon
+        <SunIcon />
       </span>
       <span className='w-8 h-8 hidden dark:block main-transition'>
-        moon icon
+        <MoonIcon />
       </span>
     </div>
   );

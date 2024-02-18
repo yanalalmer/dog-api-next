@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={montserrat.className}>
+      <body
+        className={`${montserrat.className} bg-white text-black dark:bg-black dark:text-white main-transition`}
+      >
         <RecoilRootWrapper>
           <Container>
             <Navbar />

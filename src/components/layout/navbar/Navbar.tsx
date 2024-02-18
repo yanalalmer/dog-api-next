@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { NavbarLogo } from '@/components';
+import { NavbarLogo, ThemeToggleButton } from '@/components';
 
 export const Navbar = () => {
   return (
@@ -15,7 +14,7 @@ export const Navbar = () => {
         >
           Home
         </Link>
-        theme toggle button
+        <ThemeToggleButton />
       </div>
     </nav>
   );

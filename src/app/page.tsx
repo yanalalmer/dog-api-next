@@ -1,26 +1,9 @@
 'use client';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { loadingState, dogState, errorState } from '@/state';
-import { useRecoilState } from 'recoil';
+import { useGetRandomDog } from '@/hooks/useGetRandomDog';
 
 export default function Home() {
   const url = 'https://dog.ceo/api/breeds/image/random';
-  const [loading, setLoading] = useRecoilState(loadingState);
-  const [dog, setDog] = useRecoilState(dogState);
-  const [error, setError] = useRecoilState(errorState);
-
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get(url)
-      .then((res) => console.log(res))
-      .catch((err) => {
-        console.log('this is an error', err.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [url]);
+  const { dog, loading, error } = useGetRandomDog(url);
+  console.log(dog);
   return <main>this is my app</main>;
 }

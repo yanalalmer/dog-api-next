@@ -10,7 +10,7 @@ export const useGetRandomDog = (url: string) => {
   const [dog, setDog] = useRecoilState<IDogData>(dogState);
   const [error, setError] = useRecoilState<IErrorResponse>(errorState);
 
-  useEffect(() => {
+  const runFetch = () => {
     setLoading({ loading: true });
     axios
       .get<IDogData>(url)
@@ -23,6 +23,9 @@ export const useGetRandomDog = (url: string) => {
       .finally(() => {
         setLoading({ loading: false });
       });
-  }, [url]);
-  return { dog, loading, error };
+  };
+
+  useEffect(runFetch, [url]);
+
+  return { dog, loading, error, refetch: runFetch };
 };

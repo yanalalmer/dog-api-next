@@ -8,3 +8,9 @@ export interface IErrorResponse {
 export interface ILoading {
   loading: boolean;
 }
+export interface ICardProps {
+  background: string;
+  link: string;
+  title: string;
+  description: string;
+}

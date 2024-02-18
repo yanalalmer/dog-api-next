@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { SunIcon, MoonIcon } from '/public/icons';
+import { SunIcon, MoonIcon } from '../../../../public/icons';
 
 // toggle theme button
 export const ThemeToggleButton: React.FC = () => {

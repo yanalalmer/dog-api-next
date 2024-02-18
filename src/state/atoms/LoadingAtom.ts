@@ -1,7 +1,8 @@
 'use client';
 import { atom } from 'recoil';
+import { ILoading } from '@/types';
 
-export const loadingState = atom({
+export const loadingState = atom<ILoading>({
   key: 'loadingState',
-  default: false as boolean,
+  default: { loading: false },
 });

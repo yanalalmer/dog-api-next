@@ -3,15 +3,15 @@ import axios from 'axios';
 import { loadingState, dogState, errorState } from '@/state';
 import { useRecoilState } from 'recoil';
 // types
-import { IErrorResponse, IDogData } from '@/types';
+import { IErrorResponse, IDogData, ILoading } from '@/types';
 
 export const useGetRandomDog = (url: string) => {
-  const [loading, setLoading] = useRecoilState(loadingState);
-  const [dog, setDog] = useRecoilState<IDogData | null>(dogState);
-  const [error, setError] = useRecoilState<IErrorResponse | null>(errorState);
+  const [loading, setLoading] = useRecoilState<ILoading>(loadingState);
+  const [dog, setDog] = useRecoilState<IDogData>(dogState);
+  const [error, setError] = useRecoilState<IErrorResponse>(errorState);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading({ loading: true });
     axios
       .get<IDogData>(url)
       .then((res) => setDog(res?.data))
@@ -21,7 +21,7 @@ export const useGetRandomDog = (url: string) => {
         );
       })
       .finally(() => {
-        setLoading(false);
+        setLoading({ loading: false });
       });
   }, [url]);
   return { dog, loading, error };

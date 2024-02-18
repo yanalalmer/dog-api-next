@@ -1,7 +1,8 @@
 'use client';
 import { atom } from 'recoil';
+import { IDogData } from '@/types';
 
-export const dogState = atom({
+export const dogState = atom<IDogData>({
   key: 'dogState',
-  default: '' as string,
+  default: { message: '', status: '' },
 });

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import '@/styles/globals.css';
 import { RecoilRootWrapper } from '@/state';
+import { Container } from '@/components';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
-        <RecoilRootWrapper>{children}</RecoilRootWrapper>
+        <RecoilRootWrapper>
+          <Container>{children}</Container>
+        </RecoilRootWrapper>
       </body>
     </html>
   );

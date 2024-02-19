@@ -1,7 +1,22 @@
 'use client';
 import React from 'react';
-import { SunIcon, MoonIcon } from '../../../../public/icons';
+import { SunIcon, MoonIcon } from '/public/icons';
+import { IButtonProps } from '@/types';
 
+// main button
+export const PrimaryButton: React.FC<IButtonProps> = ({
+  type = 'submit',
+  text = 'submit',
+}) => {
+  return (
+    <button
+      type={type}
+      className='bg-blue p-2 text-white font-bold rounded-md border-[1px] border-blue tablet:flex hidden capitalize hover:bg-blue/80 main-transition'
+    >
+      {text}
+    </button>
+  );
+};
 // toggle theme button
 export const ThemeToggleButton: React.FC = () => {
   const toggleTheme = () => {

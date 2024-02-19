@@ -14,3 +14,7 @@ export interface ICardProps {
   title: string;
   description: string;
 }
+export interface IButtonProps {
+  type: 'button' | 'submit' | 'reset';
+  text: string;
+}

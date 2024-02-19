@@ -1,5 +1,5 @@
 'use client';
-import { Card } from '@/components';
+import { Card, PrimaryButton } from '@/components';
 import { useGetRandomDog } from '@/hooks';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   if (errorMessage) return <h1>{errorMessage}</h1>;
 
   return (
-    <main className='flex justify-center items-center mt-16'>
+    <main className='flex justify-center flex-col items-center mt-16'>
       <Card
         background={dogImg}
         link=''
@@ -23,9 +23,9 @@ export default function Home() {
         description='this is a description asosdfa;lsdkfjas;ldkfjas;ldfj;lkajsdf;laksjdf;laksjdf;lkasjdf'
       />
       <h1>{reqStatus}</h1>
-      {/* <button className='block' onClick={refetch}>
-          re fetch
-        </button> */}
+      <div onClick={refetch}>
+        <PrimaryButton text='new image' type='submit' />
+      </div>
     </main>
   );
 }

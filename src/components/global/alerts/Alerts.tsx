@@ -16,7 +16,7 @@ export const SuccessAlert: React.FC<IAlertProps> = ({ title, message }) => {
 export const DangerAlert: React.FC<IAlertProps> = ({ title, message }) => {
   return (
     <div
-      className='bg-red-500 border-t border-b border-red-500 px-4 py-3'
+      className='bg-red-500 border-t border-b border-red-500 px-4 py-3 max-w-lg w-full my-8'
       role='alert'
     >
       <p className='font-bold'>{title}</p>

@@ -7,6 +7,7 @@ import {
   DangerAlert,
 } from '@/components';
 import { useGetRandomDog } from '@/hooks';
+import { extractBreedName } from '@/lib';
 
 export default function Home() {
   const url = 'https://dog.ceo/api/breeds/image/random';
@@ -19,12 +20,13 @@ export default function Home() {
 
   if (isLoading) return <Loading />;
   if (errorMessage) return <h1>{errorMessage}</h1>;
-  console.log(dogImg);
+  const breedName = extractBreedName(dogImg);
+
   return (
     <main className='flex justify-center flex-col items-center mt-16'>
       <Card
         background={dogImg}
-        link='/breed/german'
+        link={`/breed/${breedName}`}
         title='this is my title asldfj;alskdf;laksjdfasd;lkfjasd;flkjasdfa;lsdkfa;sldkf'
         description='this is a description asosdfa;lsdkfjas;ldkfjas;ldfj;lkajsdf;laksjdf;laksjdf;lkasjdf'
       />

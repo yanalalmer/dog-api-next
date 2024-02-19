@@ -18,3 +18,7 @@ export interface IButtonProps {
   type: 'button' | 'submit' | 'reset';
   text: string;
 }
+export interface IAlertProps {
+  title: string;
+  message: string;
+}

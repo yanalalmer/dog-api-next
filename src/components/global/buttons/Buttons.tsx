@@ -18,7 +18,7 @@ export const PrimaryButton: React.FC<IButtonProps> = ({
   );
 };
 // toggle theme button
-export const ThemeToggleButton: React.FC = () => {
+export const ThemeToggleButton = () => {
   const toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
   };

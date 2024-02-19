@@ -9,6 +9,7 @@ export const useGetRandomDog = (url: string) => {
   const [loading, setLoading] = useRecoilState<ILoading>(loadingState);
   const [dog, setDog] = useRecoilState<IDogData>(dogState);
   const [error, setError] = useRecoilState<IErrorResponse>(errorState);
+
   const runFetch = () => {
     setLoading({ loading: true });
     axios

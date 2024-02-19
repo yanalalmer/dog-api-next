@@ -12,12 +12,12 @@ export const Card: React.FC<ICardProps> = ({
   return (
     <Link href={link}>
       <article
-        className='mx-auto max-w-lg shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group'
+        className='mx-auto w-full shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group'
         style={{ backgroundImage: `url(${background})` }}
       >
         <div className='bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300'>
           <h1 className='text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300'>
-            On A Day Like Today
+            {title}
           </h1>
           <div className='w-16 h-2 bg-blue rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300'></div>
           <p className='opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500'>

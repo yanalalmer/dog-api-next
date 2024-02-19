@@ -17,17 +17,18 @@ export default function Home() {
     error: { message: errorMessage },
     refetch,
   } = useGetRandomDog(url);
+
   const breedName = dogImg ? extractBreedName(dogImg) : '';
+  console.log(breedName);
 
   if (isLoading) return <Loading />;
   if (errorMessage) return <h1>{errorMessage}</h1>;
-
   return (
     <main className='flex justify-center flex-col items-center mt-16'>
       <Card
         background={dogImg}
         link={`/breed/${breedName}`}
-        title='this is my title asldfj;alskdf;laksjdfasd;lkfjasd;flkjasdfa;lsdkfa;sldkf'
+        title={breedName}
         description='this is a description asosdfa;lsdkfjas;ldkfjas;ldfj;lkajsdf;laksjdf;laksjdf;lkasjdf'
       />
       {reqStatus === 'success' ? (

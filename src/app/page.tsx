@@ -17,10 +17,10 @@ export default function Home() {
     error: { message: errorMessage },
     refetch,
   } = useGetRandomDog(url);
+  const breedName = dogImg ? extractBreedName(dogImg) : '';
 
   if (isLoading) return <Loading />;
   if (errorMessage) return <h1>{errorMessage}</h1>;
-  const breedName = extractBreedName(dogImg);
 
   return (
     <main className='flex justify-center flex-col items-center mt-16'>

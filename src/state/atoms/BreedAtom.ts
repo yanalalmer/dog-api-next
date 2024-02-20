@@ -2,7 +2,7 @@
 import { atom } from 'recoil';
 import { IBreedData } from '@/types';
 
-export const dogState = atom<IBreedData>({
-  key: 'dogState',
+export const breedState = atom<IBreedData>({
+  key: 'breedState',
   default: { message: [], status: '' },
 });

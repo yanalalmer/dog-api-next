@@ -3,3 +3,4 @@ export * from './RecoilRootWrapper';
 export * from './atoms/DogAtom';
 export * from './atoms/ErrorAtom';
 export * from './atoms/LoadingAtom';
+export * from './atoms/BreedAtom';

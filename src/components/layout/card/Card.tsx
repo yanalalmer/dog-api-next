@@ -12,10 +12,10 @@ export const Card: React.FC<ICardProps> = ({
   return (
     <Link href={link}>
       <article
-        className='mx-auto w-full shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group'
+        className='mx-auto w-full shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group rounded-xl'
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className='bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300'>
+        <div className='bg-black bg-opacity-20 min-h-150 px-10 flex flex-wrap flex-col pt-96 hover:bg-opacity-75 transform duration-300 rounded-xl'>
           <h1 className='text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300'>
             {title}
           </h1>

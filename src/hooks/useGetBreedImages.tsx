@@ -27,5 +27,5 @@ export const useGetBreedImages = (url: string) => {
 
   useEffect(runFetch, [url]);
 
-  return { breed, loading, error, loadMore: runFetch };
+  return { breed, loading, error };
 };

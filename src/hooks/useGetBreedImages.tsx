@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil';
 // types
 import { IErrorResponse, IBreedData, ILoading } from '@/types';
 
-export const useGetRandomDog = (url: string) => {
+export const useGetBreedImages = (url: string) => {
   const [loading, setLoading] = useRecoilState<ILoading>(loadingState);
   const [breed, setBreed] = useRecoilState<IBreedData>(breedState);
   const [error, setError] = useRecoilState<IErrorResponse>(errorState);

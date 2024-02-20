@@ -6,7 +6,7 @@ import { Loading, Card, PrimaryButton } from '@/components';
 
 export default function BreedName() {
   const params = useParams();
-  const breed = decodeURIComponent(params.breedName);
+  // const breed = decodeURIComponent(params.breedName);
   const url = `https://dog.ceo/api/breed/hound/images`;
   const {
     breed: { message: images, status: reqStatus },

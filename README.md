@@ -13,7 +13,7 @@
     An awesome README template to jumpstart your projects!
     <br />
     <br />
-    <a href="https://main--weatherappnextjs.netlify.app/">View Demo</a>
+    <a href="https://dog-api-next.netlify.app">View Demo</a>
     ·
   </p>
 </div>

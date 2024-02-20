@@ -2,6 +2,10 @@ export interface IDogData {
   message: string;
   status: string;
 }
+export interface IBreedData {
+  message: string[];
+  status: string;
+}
 export interface IErrorResponse {
   message: string;
 }

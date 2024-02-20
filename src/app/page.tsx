@@ -17,9 +17,7 @@ export default function Home() {
     error: { message: errorMessage },
     refetch,
   } = useGetRandomDog(url);
-
   const breedName = dogImg ? extractBreedName(dogImg) : '';
-  console.log(breedName);
 
   if (isLoading) return <Loading />;
   if (errorMessage) return <h1>{errorMessage}</h1>;
